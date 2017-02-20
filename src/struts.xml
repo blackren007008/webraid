@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts>
+
+    <constant name="struts.i18n.reload" value="false" />
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.configuration.xml.reload" value="true" />
+    <constant name="struts.custom.i18n.resources" value="globalMessages" />
+    <constant name="struts.action.extension" value="action,," />
+
+    <constant name="struts.convention.package.locators.basePackage" value="com.ferris.webraid" />
+    <constant name="struts.convention.result.path" value="/WEB-INF" />
+
+    <constant name="struts.convention.exclude.packages" value="org.apache.struts.*,org.springframework.web.struts.*,org.springframework.web.struts2.*,org.hibernate.*"/>
+
+    <constant name="struts.serve.static" value="true" />
+    <constant name="struts.serve.static.browserCache" value="false" />
+    <constant name="struts.ui.theme" value="simple" />
+
+
+    <package name="default" extends="struts-default">
+
+        <default-action-ref name="index" />
+        <global-allowed-methods>regex:.*</global-allowed-methods>
+
+        <action name="index">
+            <result>/WEB-INF/login.jsp</result>
+        </action>
+        
+        <action name="loginAction" class="com.ferris.webraid.action.LoginAction">
+            <result type="chain">
+            	<param name="actionName">ssdAction</param>
+            	<param name="method">list</param>
+            </result>
+        </action>
+
+		<action name="homeAction" class="com.ferris.webraid.action.HomeAction">
+            <result>/WEB-INF/home.jsp</result>
+        </action>
+        
+        <action name="ssdAction" class="com.ferris.webraid.action.SSDAction">
+            <result>/WEB-INF/home.jsp</result>
+        </action>
+    </package>
+
+
+</struts>
+
+<!-- END SNIPPET: xworkSample -->
+
