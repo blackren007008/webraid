@@ -75,7 +75,7 @@
 
 		<!-- BEGIN LOGIN FORM -->
 
-		<form class="form-vertical login-form" action="loginAction">
+		<form class="form-vertical login-form" action="loginAction" method="post">
 
 			<h3 class="form-title">Login to your account</h3>
 
