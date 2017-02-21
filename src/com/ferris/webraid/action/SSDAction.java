@@ -1,5 +1,7 @@
 package com.ferris.webraid.action;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +17,10 @@ public class SSDAction extends ActionSupport {
 	private ISSDService ssdService;
 	private List<SSD> ssds;
 	private SSD ssd;
+	private InputStream inputStream;
+	private int limit;
+	private int offset;
+	private String order;
 
 	public ISSDService getSsdService() {
 		return ssdService;
@@ -29,8 +35,44 @@ public class SSDAction extends ActionSupport {
 		return SUCCESS;
 	}
 	
+	public String listData() throws Exception{
+		System.out.println("listData");
+		inputStream = new ByteArrayInputStream("{total: 100,rows: [{\"id\": 0,\"name\": \"Item 0\",\"price\": \"$0\"}]}".getBytes("ISO-8859-1"));
+		return SUCCESS;
+	}
+	public InputStream getResult() {
+		System.out.println("getResult");
+		return inputStream;
+	}
+	
 	public String getDetail(){
 		ssd = ssdService.getSSDDetail("");
 		return SUCCESS;
 	}
+
+	public int getLimit() {
+		return limit;
+	}
+
+	public void setLimit(int limit) {
+		this.limit = limit;
+	}
+
+	public int getOffset() {
+		return offset;
+	}
+
+	public void setOffset(int offset) {
+		this.offset = offset;
+	}
+
+	public String getOrder() {
+		return order;
+	}
+
+	public void setOrder(String order) {
+		this.order = order;
+	}
+
+	
 }
