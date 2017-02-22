@@ -7,7 +7,11 @@ import java.util.List;
 
 import com.ferris.webraid.model.SSD;
 import com.ferris.webraid.service.ISSDService;
+import com.ferris.webraid.util.TableModel;
 import com.opensymphony.xwork2.ActionSupport;
+
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
 
 public class SSDAction extends ActionSupport {
 	/**
@@ -39,6 +43,8 @@ public class SSDAction extends ActionSupport {
 	public String listData() throws Exception{
 		System.out.println("listData");
 		inputStream = new ByteArrayInputStream("{\"total\": 100,\"rows\": [{\"id\": 0,\"name\": \"Item 0\",\"price\": \"$0\"}]}".getBytes("UTF-8"));
+		ssds = ssdService.getSSDList();
+		inputStream = TableModel.toJSONStream(ssds);
 		return SUCCESS;
 	}
 	public InputStream getResult() {

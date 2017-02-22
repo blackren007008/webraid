@@ -11,6 +11,7 @@
 <!-- <link rel="stylesheet" href="assets/examples.css"> -->
 <link rel="stylesheet" href="assets/index.css">
 <script src="assets/jquery.min.js"></script>
+<script src="media/js/jquery-ui-1.10.1.custom.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/bootstrap-table/src/bootstrap-table.js"></script>
 <%-- <script src="ga.js"></script> --%>

@@ -9,8 +9,7 @@
 <body>
     <div class="container">
     	<div style="height: 60px;"></div>
-    	存储盘
-        <div id="toolbar">
+        <div id="toolbar" style="font-weight: 900;">存储盘
 	    </div>
         <table id="table"
                data-toolbar="#toolbar"
@@ -26,22 +25,43 @@
                data-pagination="true">
             <thead>
             <tr>
-                <th data-field="id">序列号</th>
-                <th data-field="name">容量(GB)</th>
-                <th data-field="price">SSD名称</th>
-                <th data-field="price1">介质类型</th>
-                <th data-field="price2">固件版本</th>
-                <th data-field="price">型号</th>
-                <th data-field="price">状态</th>
-                <th data-field="price">制造商</th>
-                <th data-field="price">总线协议</th>
-                <th data-field="price">存储池名称</th>
-                <th data-field="price">设备号</th>
+                <th data-field="seqNo">序列号</th>
+                <th data-field="capcity">容量(GB)</th>
+                <th data-field="ssdName">SSD名称</th>
+                <th data-field="mediaType">介质类型</th>
+                <th data-field="firmwareVer">固件版本</th>
+                <th data-field="model">型号</th>
+                <th data-field="status">状态</th>
+                <th data-field="manufactCompany">制造商</th>
+                <th data-field="busProtocol">总线协议</th>
+                <th data-field="storagePool">存储池名称</th>
+                <th data-field="deviceNo">设备号</th>
             </tr>
             </thead>
         </table>
     </div>
-    
+	<button class="btn btn-primary btn-lg" data-toggle="modal"
+		data-target="#myModal">button</button>
+	<!-- 模态框（Modal） -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Title</h4>
+				</div>
+				<div class="modal-body">Text</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary">Ok</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal -->
+	</div>
 <script>
 function detailFormatter(index, row) {
     var html = [];
@@ -51,6 +71,12 @@ function detailFormatter(index, row) {
     htmlobj=$.ajax({url:"ssdListAction",async:false});
     return html.join('');
 }
+$("#myModal").draggable({
+    handle: ".modal-header",
+    cursor: 'move',
+    refreshPositions: false
+});
+$("#myModal").css("overflow", "hidden");
 </script>
 </body>
 </html>

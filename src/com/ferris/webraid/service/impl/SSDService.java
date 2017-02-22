@@ -13,7 +13,19 @@ public class SSDService implements ISSDService {
 		// TODO Auto-generated method stub
 		List<SSD> ssds = new ArrayList<SSD>();
 		SSD ssd = new SSD();
-		ssd.setSeqNo("a1");
+		ssd.setSeqNo("seq1");
+		ssd.setCapcity("100");
+		ssd.setSsdName("name1");
+		ssds.add(ssd);
+		ssd = new SSD();
+		ssd.setSeqNo("seq2");
+		ssd.setCapcity("320");
+		ssd.setSsdName("name2");
+		ssds.add(ssd);
+		ssd = new SSD();
+		ssd.setSeqNo("seq2");
+		ssd.setCapcity("500");
+		ssd.setSsdName("name3");
 		ssds.add(ssd);
 		return ssds;
 	}
