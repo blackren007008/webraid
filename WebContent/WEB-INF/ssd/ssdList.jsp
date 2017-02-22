@@ -1,60 +1,56 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/bootstrap-table/src/bootstrap-table.css">
-<link rel="stylesheet" href="assets/examples.css">
-<script src="assets/jquery.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/bootstrap-table/src/bootstrap-table.js"></script>
-<script src="ga.js"></script>
-<title>Insert title here</title>
+<title>SSD</title>
 </head>
 <body>
     <div class="container">
+    	<div style="height: 60px;"></div>
+    	存储盘
+        <div id="toolbar">
+	    </div>
         <table id="table"
-               data-toggle="table"
-               data-height="460"
-               data-ajax1="ajaxRequest"
-               data-url="ssdListAction"
+               data-toolbar="#toolbar"
                data-search="true"
+               data-show-refresh="true"
+	           data-show-export="true"
+	           data-detail-view="true"
+	           data-detail-formatter="detailFormatter"
+               data-toggle="table"
+               data-height="550"
+               data-url="ssdListAction"
                data-side-pagination="server"
                data-pagination="true">
             <thead>
             <tr>
-                <th data-field="id">ID</th>
-                <th data-field="name">Item Name</th>
-                <th data-field="price">Item Price</th>
+                <th data-field="id">序列号</th>
+                <th data-field="name">容量(GB)</th>
+                <th data-field="price">SSD名称</th>
+                <th data-field="price1">介质类型</th>
+                <th data-field="price2">固件版本</th>
+                <th data-field="price">型号</th>
+                <th data-field="price">状态</th>
+                <th data-field="price">制造商</th>
+                <th data-field="price">总线协议</th>
+                <th data-field="price">存储池名称</th>
+                <th data-field="price">设备号</th>
             </tr>
             </thead>
         </table>
     </div>
-    <div id="myDiv">Let AJAX change this text</div>
-	<button id="b01" type="button">Change Content</button>
     
 <script>
-    var $table = $('#table');
-
-    // your custom ajax request here
-    function ajaxRequest(params) {
-        // data you need
-        console.log(params.data);
-        // just use setTimeout
-        setTimeout(function () {
-            params.success( {total: 100,rows: [{"id": 0,"name": "Item 0","price": "$0"}]} );
-        }, 1000);
-    }
-    
-    $(document).ready(function(){
-    	  $("#b01").click(function(){
-    	  htmlobj=$.ajax({url:"ssdListAction",async:false});
-    	  $("#myDiv").html(htmlobj.responseText);
-    	  });
-    	});
-
+function detailFormatter(index, row) {
+    var html = [];
+    $.each(row, function (key, value) {
+        html.push('<b>' + key + ':</b> ' + value + '<br>');
+    });
+    htmlobj=$.ajax({url:"ssdListAction",async:false});
+    return html.join('');
+}
 </script>
 </body>
 </html>

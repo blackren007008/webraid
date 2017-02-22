@@ -14,4 +14,7 @@
     <decorator name="main" page="main1.jsp">
 		<pattern>/home.*</pattern>
     </decorator>
+    <decorator name="table" page="tableheader.jsp">
+		<pattern>/loginAction</pattern>
+    </decorator>
 </decorators>

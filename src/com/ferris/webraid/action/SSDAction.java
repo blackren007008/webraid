@@ -31,13 +31,14 @@ public class SSDAction extends ActionSupport {
 	}
 	
 	public String list(){
+		System.out.println("list");
 		ssds = ssdService.getSSDList();
 		return SUCCESS;
 	}
 	
 	public String listData() throws Exception{
 		System.out.println("listData");
-		inputStream = new ByteArrayInputStream("{total: 100,rows: [{\"id\": 0,\"name\": \"Item 0\",\"price\": \"$0\"}]}".getBytes("ISO-8859-1"));
+		inputStream = new ByteArrayInputStream("{\"total\": 100,\"rows\": [{\"id\": 0,\"name\": \"Item 0\",\"price\": \"$0\"}]}".getBytes("UTF-8"));
 		return SUCCESS;
 	}
 	public InputStream getResult() {
