@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+
+<!-- BEGIN HEAD -->
+
+<head>
+
+	<meta charset="utf-8" />
+
+	<title>Metronic | UI Features - Tabs & Accordions</title>
+
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+	<meta content="" name="description" />
+
+	<meta content="" name="author" />
+
+	<!-- BEGIN GLOBAL MANDATORY STYLES -->
+
+	<link href="media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+	<link href="media/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+
+	<link href="media/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+
+	<link href="media/css/style-metro.css" rel="stylesheet" type="text/css"/>
+
+	<link href="media/css/style.css" rel="stylesheet" type="text/css"/>
+
+	<link href="media/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+
+	<link href="media/css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+
+	<link href="media/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+
+	<!-- END GLOBAL MANDATORY STYLES -->
+
+	<link rel="shortcut icon" href="media/image/favicon.ico" />
+
+</head>
+
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+
+<body class="page-header-fixed page-full-width">
+
+	<!-- BEGIN CONTAINER -->
+
+	<div class="page-container row-fluid">
+
+		<!-- BEGIN PAGE -->
+
+		<div class="page-content">
+
+			<!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+
+			<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+
+			<div class="container-fluid">
+
+				<!-- BEGIN PAGE HEADER-->
+
+				<!-- END PAGE HEADER-->
+
+				<!-- BEGIN PAGE CONTENT-->
+
+				
+				<div class="row-fluid ">
+
+					<div class="span12">
+
+						<!-- BEGIN INLINE TABS PORTLET-->
+
+						<div class="portlet box green">
+
+							<div class="portlet-title">
+
+								<div class="caption"><i class="icon-reorder"></i>存储池</div>
+
+							</div>
+
+							<div class="portlet-body">
+
+								<div class="row-fluid">
+
+									<div class="span12">
+
+										<!--BEGIN TABS-->
+
+										<div class="tabbable tabbable-custom">
+
+											<ul class="nav nav-pills">
+
+												<li class="active"><a href="#tab_1_1" data-toggle="tab">创建存储池</a></li>
+
+												<li><a href="#tab_1_2" data-toggle="tab">扩容存储池</a></li>
+
+												<li><a href="#tab_1_3" data-toggle="tab">重构状态</a></li>
+												
+												<li><a href="#tab_1_4" data-toggle="tab">数据迁移状态</a></li>
+											</ul>
+
+											<div class="tab-content">
+
+												<div class="tab-pane active" id="tab_1_1">
+													<form action="#" class="form-horizontal">
+													
+													    <h3 class="form-section">创建存储池</h3>
+														名称....................................................................... <input type="text" name="storage_pool_name" />
+														<br/>
+														块大小.................................................................... <select name="blocksize">
+														  <option value ="512">512KB</option>
+														  <option value ="1024">1024KB</option>
+														  <option value ="2048">2048KB</option>
+														  <option value ="4096">4096KB</option>
+														</select>
+														<br/>													
+														
+														<table class="table table-striped table-bordered table-hover" id="sample_1">
+														
+																<thead>
+
+																	<tr>
+																		<th>制造商</th>
+																		<th class="hidden-480">序列号</th>
+																		<th class="hidden-480">SSD名称</th>
+
+																		<th class="hidden-480">介质类型</th>
+																		<th class="hidden-480">状态</th>
+																		<th class="hidden-480">容量(GB)</th>
+																		<th class="hidden-480">选择</th>
+																	</tr>
+
+																</thead>
+
+																<tbody>
+
+																	<tr class="odd gradeX">
+
+																		<td>shuxer</td>
+
+																		<td class="hidden-480"><a href="mailto:shuxer@gmail.com">shuxer@gmail.com</a></td>
+
+																		<td class="hidden-480">120</td>
+
+																		<td class="center hidden-480">12 Jan 2012</td>
+
+																		<td ><span class="label label-success">Approved</span></td>
+																		
+																		<td class="hidden-480">1491.22</td>
+																		
+																		<td><input type="checkbox" class="checkboxes" value="1" /></td>
+																	</tr>
+
+																</tbody>
+
+														</table>
+														<a href="#" class="btn"><i class="icon-plus"></i> Add Item</a>
+													
+													</form> 
+												</div>
+
+												<div class="tab-pane" id="tab_1_2">
+												
+													<h3 class="form-section">扩容存储池</h3>
+													
+													<label class="control-label" for="storagePool">存储池:</label>
+													<label class="control-label" for="storagePoolValue">sp001test</label>
+													<label class="control-label" for="currentSize">当前容量:</label>
+													<label class="control-label" for="currentSizeValue">1G</label>
+													<label class="control-label" for="newExtendedSize">新增容量</label>
+													<label class="control-label" for="newExtendedSizeValue">2G</label>
+													
+													<form action="#">
+														<table class="table table-striped table-bordered table-hover" id="sample_1">
+														
+																<thead>
+
+																	<tr>
+																		<th>制造商</th>
+																		<th class="hidden-480">序列号</th>
+																		<th class="hidden-480">SSD名称</th>
+
+																		<th class="hidden-480">介质类型</th>
+																		<th class="hidden-480">状态</th>
+																		<th class="hidden-480">容量(GB)</th>
+																		<th class="hidden-480">选择</th>
+																	</tr>
+
+																</thead>
+
+																<tbody>
+
+																	<tr class="odd gradeX">
+
+																		<td>shuxer</td>
+
+																		<td class="hidden-480"><a href="mailto:shuxer@gmail.com">shuxer@gmail.com</a></td>
+
+																		<td class="hidden-480">120</td>
+
+																		<td class="center hidden-480">12 Jan 2012</td>
+
+																		<td ><span class="label label-success">Approved</span></td>
+																		
+																		<td class="hidden-480">1491.22</td>
+																		
+																		<td><input type="checkbox" class="checkboxes" value="1" /></td>
+																	</tr>
+
+																</tbody>
+
+														</table>
+														<a href="#" class="btn"><i class="icon-plus"></i> Extended Item</a>
+													</form>
+
+												</div>
+												
+												<div class="tab-pane" id="tab_1_3">
+							
+													<h3 class="form-section">重构状态</h3>
+													
+													<form action="">
+													    <label class="control-label" for="storagePool">存储池名称:</label>
+														<label class="control-label" for="storagePoolValue">sp001test</label>
+														<label class="control-label" for="uuid">UUID:</label>
+														<label class="control-label" for="uuidValue">0X12345</label>
+														
+														<table class="table table-striped table-bordered table-hover" id="sample_1">
+														
+																<thead>
+
+																	<tr>
+																		<th>重构参数</th>
+																		<th class="hidden-480">当前值</th>
+																		<th class="hidden-480"></th>
+																	</tr>
+
+																</thead>
+
+																<tbody>
+
+																	<tr class="odd gradeX">
+
+																		<td>重构速度</td>
+
+																		<td class="hidden-480">20%</td>
+																		
+																		<td><input type="button"  name="setting" value="设置" /></td>
+																	</tr>
+																	
+																	<tr class="odd gradeX">
+
+																		<td>重构对象总数</td>
+
+																		<td class="hidden-480">0</td>
+																		
+																		<td></td>
+
+																	</tr>
+
+																</tbody>
+
+														</table>
+														
+														<!--Begin process bar-->
+														<label class="control-label" for="refactorPress">重构进度:</label>
+														<div class="progress">
+															<div class="progress-bar" role="progressbar" aria-valuenow="60" 
+																aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+																<span class="sr-only">40% 完成</span>
+															</div>
+														</div>
+														<input type="button"  name="pause" value="暂停" />
+														<input type="button"  name="resume" value="恢复" />
+														<!--End process bar-->
+													</form>
+													
+												</div>
+												
+												<div class="tab-pane" id="tab_1_4">
+												
+													<h3 class="form-section">数据迁移状态</h3>
+													
+													<form action="">
+													    <label class="control-label" for="storagePool">存储池名称:</label>
+														<label class="control-label" for="storagePoolValue">sp001test</label>
+														<label class="control-label" for="uuid">UUID:</label>
+														<label class="control-label" for="uuidValue">0X12345</label>
+														
+														<table class="table table-striped table-bordered table-hover" id="sample_1">
+														
+																<thead>
+
+																	<tr>
+																		<th>迁移参数</th>
+																		<th class="hidden-480">当前值</th>
+																		<th class="hidden-480"></th>
+																	</tr>
+
+																</thead>
+
+																<tbody>
+
+																	<tr class="odd gradeX">
+
+																		<td>迁移速度</td>
+
+																		<td class="hidden-480">20%</td>
+																		
+																		<td><input type="button"  name="setting" value="设置" /></td>
+																	</tr>
+																	
+																	<tr class="odd gradeX">
+
+																		<td>允许迁移</td>
+
+																		<td class="hidden-480">Y</td>
+																		
+																		<td><input type="button"  name="setting" value="禁止" /></td>
+																	</tr>
+																	
+																	<tr class="odd gradeX">
+
+																		<td>正在迁移</td>
+
+																		<td class="hidden-480">N</td>
+																		
+																		<td></td>
+
+																	</tr>
+
+																</tbody>
+
+														</table>
+													</form>
+												</div>
+
+											</div>
+
+										</div>
+
+										<!--END TABS-->
+
+									</div>
+	
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- END INLINE TABS PORTLET-->
+
+					</div>
+
+				</div>
+
+				<!-- END PAGE CONTENT-->
+
+			</div>
+
+			<!-- END PAGE CONTAINER-->       
+
+		</div>
+
+		<!-- BEGIN PAGE -->     
+
+	</div>
+
+	<!-- END CONTAINER -->
+
+	<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+
+	<!-- BEGIN CORE PLUGINS -->
+
+	<script src="media/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+
+	<script src="media/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+
+	<!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+
+	<script src="media/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>      
+
+	<script src="media/js/bootstrap.min.js" type="text/javascript"></script>
+
+	<!--[if lt IE 9]>
+
+	<script src="media/js/excanvas.min.js"></script>
+
+	<script src="media/js/respond.min.js"></script>  
+
+	<![endif]-->   
+
+	<script src="media/js/jquery.slimscroll.min.js" type="text/javascript"></script>
+
+	<script src="media/js/jquery.blockui.min.js" type="text/javascript"></script>  
+
+	<script src="media/js/jquery.cookie.min.js" type="text/javascript"></script>
+
+	<script src="media/js/jquery.uniform.min.js" type="text/javascript" ></script>
+
+	<!-- END CORE PLUGINS -->
+
+	<script src="media/js/app.js"></script>      
+
+	<script>
+
+		jQuery(document).ready(function() {       
+
+		   // initiate layout and plugins
+
+		   App.init();
+
+		});
+
+	</script>
+
+	<!-- END JAVASCRIPTS -->
+
+</body>
+
+<!-- END BODY -->
+
+</html>

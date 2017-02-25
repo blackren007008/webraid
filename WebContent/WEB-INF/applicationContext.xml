@@ -13,5 +13,15 @@
     <bean id="ssdAction" class="com.ferris.webraid.action.SSDAction" scope="prototype">
     	<property name="ssdService" ref="ssdService"></property>
     </bean>
+    
+    <bean id="storagePoolService" class="com.ferris.webraid.service.impl.StoragePoolService"></bean>
+    <bean id="storagePoolAction" class="com.ferris.webraid.action.StoragePoolAction" scope="prototype">
+    	<property name="storagePoolService" ref="storagePoolService"></property>
+    </bean>
+    
+    <bean id="vhdService" class="com.ferris.webraid.service.impl.VirtualHardDiskService"></bean>
+    <bean id="vhdAction" class="com.ferris.webraid.action.VirtualHardDiskAction" scope="prototype">
+    	<property name="vhdService" ref="vhdService"></property>
+    </bean>
 </beans>
 
