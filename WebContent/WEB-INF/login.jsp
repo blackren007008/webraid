@@ -133,7 +133,7 @@
 
 				</label>
 
-				<button type="submit" class="btn green pull-right">
+				<button type="submit" class="btn blue pull-right">
 
 				Login <i class="m-icon-swapright m-icon-white"></i>
 

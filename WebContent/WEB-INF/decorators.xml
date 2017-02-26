@@ -16,5 +16,8 @@
     </decorator>
     <decorator name="table" page="tableheader.jsp">
 		<pattern>/loginAction</pattern>
+		<pattern>/ssdAction</pattern>
+		<pattern>/storagePoolAction</pattern>
+		<pattern>/vhdAction</pattern>
     </decorator>
 </decorators>
