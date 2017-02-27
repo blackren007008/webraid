@@ -15,6 +15,37 @@
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/bootstrap-table/src/bootstrap-table.js"></script>
 <%-- <script src="ga.js"></script> --%>
+<script type="text/javascript">
+function generateTable(row, rowDef, columnNum){
+	var i=0;
+	var width = 100/(columnNum*2);
+	var html = [];
+	html.push('<div style="padding-left: 30px;">');
+	html.push('<table>');
+	$.each(rowDef, function (key, value) {
+		if(key in row){
+			if(i%columnNum==0){
+				html.push('<tr>');
+			}
+			html.push('<td width='+width+'% style="font-weight: 900;">' + value + '</td><td width='+width+'%>' + row[key] + '</td>');
+			if(i%columnNum==columnNum-1){
+				html.push('</tr>');
+			}
+			i++;
+		}
+	});
+	if(i%columnNum!=0){
+		while(i%columnNum!=0){
+			html.push('<td width='+width+'%>' + '</td><td width='+width+'%>' + '</td>');
+			i++;
+		}
+		html.push('</tr>');
+	}
+	html.push('</table>');
+	html.push('</div>');
+	return html;
+}
+</script>
 <decorator:head/>
 <title><decorator:title/></title>
 </head>
@@ -35,9 +66,9 @@
                 <li>
                 	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">存储管理<span class="caret"></span></a>
                 	<ul class="dropdown-menu" role="menu">
-                        <li><a href="#">存储盘</a></li>
-                        <li><a href="#">存储池</a></li>
-                        <li><a href="#">虚拟硬盘</a></li>
+                        <li><a href="ssdAction">存储盘</a></li>
+                        <li><a href="storagePoolAction">存储池</a></li>
+                        <li><a href="vhdAction">虚拟硬盘</a></li>
                         <li><a href="#">分层存储</a></li>
                     </ul>
                 </li>

@@ -35,7 +35,7 @@
         
         <action name="loginAction" class="com.ferris.webraid.action.LoginAction">
             <result type="chain">
-            	<param name="actionName">vhdAction</param>
+            	<param name="actionName">ssdAction</param>
             	<param name="method">list</param>
             </result>
         </action>
