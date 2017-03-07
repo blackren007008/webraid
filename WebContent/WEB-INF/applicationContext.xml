@@ -23,5 +23,10 @@
     <bean id="vhdAction" class="com.ferris.webraid.action.VirtualHardDiskAction" scope="prototype">
     	<property name="vhdService" ref="vhdService"></property>
     </bean>
+    
+    <bean id="layerVhdService" class="com.ferris.webraid.service.impl.LayerVirtualHardDiskService"></bean>
+    <bean id="layerVhdAction" class="com.ferris.webraid.action.LayerVirtualHardDiskAction" scope="prototype">
+    	<property name="layerVhdService" ref="layerVhdService"></property>
+    </bean>
 </beans>
 

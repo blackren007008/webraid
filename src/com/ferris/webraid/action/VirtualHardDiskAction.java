@@ -33,14 +33,14 @@ public class VirtualHardDiskAction extends ActionSupport {
 	}
 	
 	public String list(){
-		vhdList = vhdService.getStoragePoolList();
+		vhdList = vhdService.getVirtualHardDiskList();
 		return SUCCESS;
 	}
 	
 	public String listData() throws Exception{
 		System.out.println("listData");
 		inputStream = new ByteArrayInputStream("{\"total\": 100,\"rows\": [{\"id\": 0,\"name\": \"Item 0\",\"price\": \"$0\"}]}".getBytes("UTF-8"));
-		vhdList = vhdService.getStoragePoolList();
+		vhdList = vhdService.getVirtualHardDiskList();
 		inputStream = TableModel.toJSONStream(vhdList);
 		return SUCCESS;
 	}
@@ -51,7 +51,7 @@ public class VirtualHardDiskAction extends ActionSupport {
 	}
 	
 	public String getDetail(){
-		vhd = vhdService.getStoragePoolDetail("");
+		vhd = vhdService.getVirtualHardDiskDetail("");
 		return SUCCESS;
 	}
 

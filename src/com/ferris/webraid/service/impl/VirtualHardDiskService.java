@@ -9,7 +9,7 @@ import com.ferris.webraid.service.IVirtualHardDiskService;
 public class VirtualHardDiskService implements IVirtualHardDiskService {
 
 	@Override
-	public List<VirtualHardDisk> getStoragePoolList() {
+	public List<VirtualHardDisk> getVirtualHardDiskList() {
 		List<VirtualHardDisk> vhdList = new ArrayList<>();
 		VirtualHardDisk vhd1 = new VirtualHardDisk();
 		vhd1.setVhdName("vhdName1");
@@ -25,25 +25,25 @@ public class VirtualHardDiskService implements IVirtualHardDiskService {
 	}
 
 	@Override
-	public VirtualHardDisk getStoragePoolDetail(String id) {
+	public VirtualHardDisk getVirtualHardDiskDetail(String id) {
 		// TODO Auto-generated method stub
 		return new VirtualHardDisk();
 	}
 
 	@Override
-	public boolean addStoragePool(String id) {
+	public boolean addVirtualHardDisk(String id) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean delteStoragePool(String id) {
+	public boolean deleteVirtualHardDisk(String id) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean expandStorgePool(String id) {
+	public boolean expandVirtualHardDisk(String id) {
 		// TODO Auto-generated method stub
 		return false;
 	}

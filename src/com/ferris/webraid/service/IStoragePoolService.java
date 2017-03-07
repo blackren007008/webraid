@@ -12,6 +12,6 @@ public interface IStoragePoolService {
 	
 	public boolean addStoragePool(String id);
 	
-	public boolean delteStoragePool(String id);
+	public boolean deleteStoragePool(String id);
 
 }

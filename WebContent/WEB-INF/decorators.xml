@@ -19,5 +19,6 @@
 		<pattern>/ssdAction</pattern>
 		<pattern>/storagePoolAction</pattern>
 		<pattern>/vhdAction</pattern>
+		<pattern>/layerVhdAction</pattern>
     </decorator>
 </decorators>

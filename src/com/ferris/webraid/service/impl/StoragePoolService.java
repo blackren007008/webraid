@@ -37,7 +37,7 @@ public class StoragePoolService implements IStoragePoolService {
 	}
 
 	@Override
-	public boolean delteStoragePool(String id) {
+	public boolean deleteStoragePool(String id) {
 		// TODO Auto-generated method stub
 		return false;
 	}

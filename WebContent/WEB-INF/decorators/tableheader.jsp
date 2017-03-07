@@ -69,7 +69,7 @@ function generateTable(row, rowDef, columnNum){
                         <li><a href="ssdAction">存储盘</a></li>
                         <li><a href="storagePoolAction">存储池</a></li>
                         <li><a href="vhdAction">虚拟硬盘</a></li>
-                        <li><a href="#">分层存储</a></li>
+                        <li><a href="layerVhdAction">分层存储</a></li>
                     </ul>
                 </li>
                 <li>

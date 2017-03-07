@@ -6,15 +6,15 @@ import com.ferris.webraid.model.VirtualHardDisk;
 
 public interface IVirtualHardDiskService {
 	
-	public List<VirtualHardDisk> getStoragePoolList();
+	public List<VirtualHardDisk> getVirtualHardDiskList();
 	
-	public VirtualHardDisk getStoragePoolDetail(String id);
+	public VirtualHardDisk getVirtualHardDiskDetail(String id);
 	
-	public boolean addStoragePool(String id);
+	public boolean addVirtualHardDisk(String id);
 	
-	public boolean delteStoragePool(String id);
+	public boolean deleteVirtualHardDisk(String id);
 	
-	public boolean expandStorgePool(String id);
+	public boolean expandVirtualHardDisk(String id);
 
 
 }
