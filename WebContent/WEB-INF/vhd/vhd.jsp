@@ -65,11 +65,14 @@
 							</li>
 						</ul>
 						<div class="tab-content">
-							<div class="tab-pane" id="panel-createVhd">
-							    <h3 class="form-section">创建虚拟硬盘</h3>
+							<div class="tab-pane active" id="panel-createVhd">
+								<div id="toolbar1" style="font-weight: 900;">创建虚拟硬盘</div>
+							    <!--h3 class="form-section">创建虚拟硬盘</h3-->
 								<form action="">
-									<table class="table table-striped table-bordered table-hover"
-										id="sample_1">
+									<table class=id="table1" data-toolbar="#toolbar1" data-search="false"
+										data-show-refresh="false" data-show-export="true"
+										data-detail-view="false" 
+										data-toggle="table">
 
 										<thead>
 
@@ -151,10 +154,13 @@
 							</div>
 							
 							<div class="tab-pane" id="panel-expandVhd">
-							    <h3 class="form-section">扩容虚拟硬盘</h3>
-							    
+							    <!--h3 class="form-section">扩容虚拟硬盘</h3-->
+							    <div id="toolbar2" style="font-weight: 900;">创建虚拟硬盘</div>
 								<form role="form" action="">
-									<table>
+									<table class=id="table2" data-toolbar="#toolbar2" data-search="false"
+										data-show-refresh="false" data-show-export="true"
+										data-detail-view="false" 
+										data-toggle="table">
 									<tr>
 										<td width=30% ><label for="vhdName_label">名称</label> </td>
 										<td width=30% ><label for="vhdName_value">mfvd_0</label></td>
